@@ -43,3 +43,6 @@ Para a parte 2, foi escolhido um programa simples de ordenação (merge sort) e 
 	Não mostra I/O (pelo menos não achei).
 	
 	http://prntscr.com/encg92
+
++ Referencias
+	https://www.ibm.com/developerworks/br/local/linux/gprof_introduction/
