@@ -11,9 +11,14 @@ Matricula: 201510710
   - (a) O perfil é afetado pelas opções de configuração?
 	Sim, pois é obtido diferentes tamanhos de resposta.
 	
+	http://prnt.sc/encifs
+	
   - (b) Pelo perfil de execução, há alguma função que poderia ser candidata a paralelização? Por quê?
 	dot_product, pois consome o maior tempo.
+	
 	http://prntscr.com/encfja
+	
+	
 	http://prntscr.com/encfoe
 
 
