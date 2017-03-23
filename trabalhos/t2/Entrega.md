@@ -24,12 +24,17 @@ Para a parte 2, foi escolhido um programa simples de ordenação (merge sort) e 
 + Visual Studio
 
 	Já vem integrado com a IDE.
+	
 	Dados de I/O aparece no gráfico.
 	http://prntscr.com/encg0c
+	
 	http://prntscr.com/encg32
+	
 	http://prntscr.com/encg6o
 + Intel V Tune
 	
 	Simples de usar.
+	
 	Não mostra I/O (pelo menos não achei).
+	
 	http://prntscr.com/encg92
