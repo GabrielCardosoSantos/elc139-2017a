@@ -65,3 +65,5 @@ Curso: Ciência da Computação
 
 ## Referências
 https://www.ibm.com/developerworks/br/aix/library/au-aix-openmp-framework/
+
+http://www.inf.ufrgs.br/~nicolas/pdf/openmp.pdf
