@@ -19,38 +19,36 @@ Curso: Ciência da Computação
    Mapeamento - Apenas a inicialização delas foi designado. pthread_create(&threads[i], &attr, dotprod_worker, (void * ) i)
 
 
-2. Considerando o tempo (em segundos) mostrado na saída do programa, qual foi a aceleração com o uso de threads?
+2. 1 thread, 7.6 seg (7640118 usec)
+   2 threads, 4.2 seg (4295634 usec)
 
 
 
-3. A aceleração (speedup) se sustenta para outros tamanhos de vetores, números de threads e repetições? Para responder a essa questão, você terá que realizar diversas execuções, variando o tamanho do problema (tamanho dos vetores e número de repetições) e o número de threads (1, 2, 4, 8..., dependendo do número de núcleos). Cada caso deve ser executado várias vezes, para depois calcular-se um tempo de processamento médio para cada caso. Atenção aos fatores que podem interferir na confiabilidade da medição: uso compartilhado do computador, tempos muito pequenos, etc.
+3. Pelos dados testados, é aproximado de 2 mesmo tendo mais threads.
 
 
+4.                
+                  1 Thread
 
-4.                1 Thread
-
-   | Size | Repetições | Tempo (s) | SpeedUp |
-   |------|------------|-----------|---------|
-   |      |            |           |         |
-   |      |            |           |         |
-   |      |            |           |         |
+   |  WorkSize  | Repetições | Tempo (s) | SpeedUp |
+   |------------|------------|-----------|---------|
+   |   600000   |   10000    |   22.6    |    1    |
+   |   600000   |    5000    |   11.1    |    1    |
    
                   2 Threads
    
-   | Size | Repetições | Tempo (s) | SpeedUp |
-   |------|------------|-----------|---------|
-   |      |            |           |         |
-   |      |            |           |         |
-   |      |            |           |         |
+   |  WorkSize  | Repetições | Tempo (s) | SpeedUp |
+   |------------|------------|-----------|---------|
+   |  300000    |   10000    |   12.6    |  1.883  |
+   |  300000    |    5000    |    6.3    |  1.761  |
    
    
                   4 Threads
    
-   | Size | Repetições | Tempo (s) | SpeedUp |
-   |------|------------|-----------|---------|
-   |      |            |           |         |
-   |      |            |           |         |
-   |      |            |           |         |
+   |  WorkSize  | Repetições | Tempo (s) | SpeedUp |
+   |------------|------------|-----------|---------|
+   |  150000    |   10000    |   11.7    |  1.931  |
+   |  150000    |    5000    |    5.6    |  1.982  |
 
 5. Não, pois sem o lock e unlock se perde a consistência no dado, trazendo um resultado não esperado.
 
@@ -62,27 +60,5 @@ Curso: Ciência da Computação
 
 
 2. Avalie o desempenho do programa em OpenMP, usando os mesmos dados/argumentos do programa com threads POSIX.
-   1 Thread
-
-   | Size | Repetições | Tempo (s) | SpeedUp |
-   |------|------------|-----------|---------|
-   |      |            |           |         |
-   |      |            |           |         |
-   |      |            |           |         |
-   
-                  2 Threads
-   
-   | Size | Repetições | Tempo (s) | SpeedUp |
-   |------|------------|-----------|---------|
-   |      |            |           |         |
-   |      |            |           |         |
-   |      |            |           |         |
-   
-   
-                  4 Threads
-   
-   | Size | Repetições | Tempo (s) | SpeedUp |
-   |------|------------|-----------|---------|
-   |      |            |           |         |
-   |      |            |           |         |
-   |      |            |           |         |
+                   
+                  
