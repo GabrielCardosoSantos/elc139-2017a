@@ -35,6 +35,7 @@ Curso: Ciência da Computação
 
 
 5. Explique as diferenças entre [pthreads_dotprod.c](pthreads_dotprod/pthreads_dotprod.c) e [pthreads_dotprod2.c](pthreads_dotprod/pthreads_dotprod2.c). Com as linhas removidas, o programa está correto?
+   
    Não, pois sem o lock e unlock se perde a consistência no dado, trazendo um resultado não esperado.
 
 
