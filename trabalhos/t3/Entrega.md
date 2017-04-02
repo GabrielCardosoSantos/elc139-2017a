@@ -8,9 +8,7 @@ Matricula: 201510710
 
 Curso: Ciência da Computação
 
-
 ## Questões Pthreads
-
 
 1. Particionamento - Na forma que foi estruturado, um exemplo é na parte do código "mysum += (a[i] * b[i])" onde pode ocorrer que cada thread pode fazer o calculo em paralelo. O espaço que cada uma irá percorrer, está em "int start = offset*wsize" e "int end = start + wsize;" onde offset seria o número da thread.
 
@@ -29,10 +27,30 @@ Curso: Ciência da Computação
 
 
 
-4. Elabore um gráfico/tabela de aceleração a partir dos dados obtidos no exercício anterior.
+4.                1 Thread
 
-
-
+   | Size | Repetições | Tempo (s) | SpeedUp |
+   |------|------------|-----------|---------|
+   |      |            |           |         |
+   |      |            |           |         |
+   |      |            |           |         |
+   
+                  2 Threads
+   
+   | Size | Repetições | Tempo (s) | SpeedUp |
+   |------|------------|-----------|---------|
+   |      |            |           |         |
+   |      |            |           |         |
+   |      |            |           |         |
+   
+   
+                  4 Threads
+   
+   | Size | Repetições | Tempo (s) | SpeedUp |
+   |------|------------|-----------|---------|
+   |      |            |           |         |
+   |      |            |           |         |
+   |      |            |           |         |
 
 5. Não, pois sem o lock e unlock se perde a consistência no dado, trazendo um resultado não esperado.
 
@@ -44,3 +62,27 @@ Curso: Ciência da Computação
 
 
 2. Avalie o desempenho do programa em OpenMP, usando os mesmos dados/argumentos do programa com threads POSIX.
+   1 Thread
+
+   | Size | Repetições | Tempo (s) | SpeedUp |
+   |------|------------|-----------|---------|
+   |      |            |           |         |
+   |      |            |           |         |
+   |      |            |           |         |
+   
+                  2 Threads
+   
+   | Size | Repetições | Tempo (s) | SpeedUp |
+   |------|------------|-----------|---------|
+   |      |            |           |         |
+   |      |            |           |         |
+   |      |            |           |         |
+   
+   
+                  4 Threads
+   
+   | Size | Repetições | Tempo (s) | SpeedUp |
+   |------|------------|-----------|---------|
+   |      |            |           |         |
+   |      |            |           |         |
+   |      |            |           |         |
