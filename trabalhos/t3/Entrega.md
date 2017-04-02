@@ -56,9 +56,12 @@ Curso: Ciência da Computação
 
 ## Implementação OpenMP
 
-1. Implemente um programa equivalente a [pthreads_dotprod.c](pthreads_dotprod/pthreads_dotprod.c) usando OpenMP.
+1. [pthreads_dotprod.c](pthreads_dotprod/pthreads_dotprod.c) usando OpenMP.
 
 
 2. Avalie o desempenho do programa em OpenMP, usando os mesmos dados/argumentos do programa com threads POSIX.
                    
                   
+
+## Referências
+https://www.ibm.com/developerworks/br/aix/library/au-aix-openmp-framework/
