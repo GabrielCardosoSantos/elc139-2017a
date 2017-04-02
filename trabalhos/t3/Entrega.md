@@ -58,10 +58,10 @@ Curso: Ciência da Computação
 
 ## Implementação OpenMP
 
-1. [pthreads_dotprod.c](pthreads_dotprod/pthreads_dotprod.c) usando OpenMP.
+1. [omp_prod_esc.c](openmp/omp_prod_esc.c)
 
 
-2. Desempenho levemente inferior ao posix
+2. Desempenho levemente inferior ao posix mas a implementação é muito mais simples
 
                   1 Thread
 
@@ -88,6 +88,7 @@ Curso: Ciência da Computação
 
 
 ## Referências
+
 https://www.ibm.com/developerworks/br/aix/library/au-aix-openmp-framework/
 
 http://www.inf.ufrgs.br/~nicolas/pdf/openmp.pdf
