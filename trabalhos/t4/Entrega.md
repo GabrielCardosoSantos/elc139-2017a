@@ -10,5 +10,5 @@ Disciplina: Programação Paralela
 
 1. O programa não mostra corretamente as saídas de cada thread. O problema se encontra nas variáveis "tid" e "total" onde todas threads acessam a variável ao mesmo tempo, causando inconsistência na resposta.
 
-2. A solução é simples, apenas informar que as variáveis "tid" e "total" sejam privadas e que o laço percorra de forma estática (static). [omp_bug2.c](omp_bug2.c)
+2. A solução é simples, apenas informar que as variáveis "tid" e "total" sejam privadas. [omp_bug2.c](omp_bug2.c)
 
