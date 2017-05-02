@@ -4,7 +4,7 @@
 
 ## Parte 1
 
-+ Particionamento: part_size = n / ntasks printf("Proc %d, n %d, part_size %d\n", taskid, n, part_size);
++ Particionamento: part_size = n / ntasks, init_vectors(a, b, part_size);;
  
   Aglomeração: O processo pai recebe e acumula, MPI_Recv(&dot, 1, MPI_DOUBLE, MPI_ANY_SOURCE, MPI_ANY_TAG, MPI_COMM_WORLD, &status) mydot += dot;
 
