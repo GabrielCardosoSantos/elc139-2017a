@@ -25,10 +25,7 @@ long wtime()
 
 Matriz lerTxt() {
 	Matriz m;
-	char cwd[1024];
-	getcwd(cwd, sizeof(cwd));
-	strcat(cwd, "crackme.txt");
-	FILE* fp = fopen(cwd, "r");
+	FILE* fp = fopen("/home/jhillian/mdcrack-1.2/crackme.txt", "r");
 	if (fp == NULL) return m;
 	printf("Arquivo aberto\n");
 
@@ -55,14 +52,9 @@ void Descriptografa(char* texto) {
 	char linha[114 + TAM_LINHA];
 	char buffer[SIZE];
 	char* found = (char*) malloc(sizeof(char)*20);
-	char retorno[20];
-	char cwd[1024];
-	getcwd(cwd, sizeof(cwd));
-	strcat(cwd, "/bin/mdcrack -M MD5 -s abcdefghijklmnopqrstuvwxyz "); 
-	strcpy(linha, cwd);
+	strcpy(linha, "/home/jhillian/mdcrack-1.2/bin/mdcrack -M MD5 -s abcdefghijklmnopqrstuvwxyz ");
 	strcat(linha, texto);
 	strcat(linha, " | grep \"Collision\" ");
-
 	out = popen(linha, "r");
 	if(!out){
 		fprintf(stderr, "Couldn't open file\n");
@@ -166,7 +158,7 @@ void Escravos(int rank) {
 				break;
 			case KILL_PROCESS:
 				done = false;
-				//printf("Acabou tarefas! Sou o processo : %d\n", rank);
+				printf("Acabou tarefas! Sou o processo : %d\n", rank);
 				break;
 		}
 
@@ -190,7 +182,7 @@ int main(int argc, char** argv) {
 	char msg[100];
 	int i, j;
 	int dest;
-
+	
 	if (rank == 0) {
 		//printf("Vou abrir o txt...\n");
 		m = lerTxt();
@@ -206,7 +198,7 @@ int main(int argc, char** argv) {
 		start_time = wtime();
 		Paralelo(rank, m, ntasks);
 		end_time = wtime();
-		printf("Tempo Paralelo: %ld usec\n", (long)(end_time2 - start_time));
+		printf("Tempo Paralelo: %ld usec\n", (long)(end_time - start_time));
 	}
 	else {
 		Escravos(rank);
