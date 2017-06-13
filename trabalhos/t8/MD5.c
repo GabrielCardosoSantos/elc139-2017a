@@ -25,7 +25,10 @@ long wtime()
 
 Matriz lerTxt() {
 	Matriz m;
-	FILE* fp = fopen("/home/jhillian/mdcrack-1.2/crackme.txt", "r");
+	char cwd[1024];
+	getcwd(cwd, sizeof(cwd));
+	strcat(cwd, "crackme.txt");
+	FILE* fp = fopen(cwd, "r");
 	if (fp == NULL) return m;
 	printf("Arquivo aberto\n");
 
@@ -53,7 +56,10 @@ void Descriptografa(char* texto) {
 	char buffer[SIZE];
 	char* found = (char*) malloc(sizeof(char)*20);
 	char retorno[20];
-	strcpy(linha, "/home/jhillian/mdcrack-1.2/bin/mdcrack -M MD5 -s abcdefghijklmnopqrstuvwxyz ");
+	char cwd[1024];
+	getcwd(cwd, sizeof(cwd));
+	strcat(cwd, "/bin/mdcrack -M MD5 -s abcdefghijklmnopqrstuvwxyz "); 
+	strcpy(linha, cwd);
 	strcat(linha, texto);
 	strcat(linha, " | grep \"Collision\" ");
 
